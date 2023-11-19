@@ -10,10 +10,11 @@
   <script src="https://cdn.jsdelivr.net/npm/truffle-contract@latest/dist/truffle-contract.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ipfs-api@latest/dist/index.js"></script>
   <script>  
-    import { createRequire } from 'ws';
-    const require = createRequire(import.meta.url);
-    // 使用require()引入ws库  
-    const ws = require('ws');  
+   import WebSocket, { WebSocketServer } from 'ws';
+
+    const ws = new WebSocketServer();
+    // // 使用require()引入ws库  
+    // const ws = require('ws');  
   
     // 创建一个WebSocket服务器实例  
     const wss = new ws.Server({ port: 8080 });  
