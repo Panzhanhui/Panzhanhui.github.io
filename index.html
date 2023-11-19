@@ -10,14 +10,12 @@
   <script  type="module"  src="https://cdn.jsdelivr.net/npm/truffle-contract@latest/dist/truffle-contract.js"></script>
   <script  type="module"  src="https://cdn.jsdelivr.net/npm/ipfs-api@latest/dist/index.js"></script>
   <script >  
-   import WebSocket, { WebSocketServer } from 'ws';
-
-    const ws = new WebSocketServer();
+   import WebSocket from 'ws';
     // // 使用require()引入ws库  
     // const ws = require('ws');  
   
     // 创建一个WebSocket服务器实例  
-    const wss = new ws.Server({ port: 8080 });  
+    const wss = new WebSocket.Server({ port: 8080 });  
   
     // 当有新的连接时触发onopen事件  
     wss.on('open', function open() {  
