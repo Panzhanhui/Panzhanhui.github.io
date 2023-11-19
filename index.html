@@ -5,11 +5,11 @@
   <title>WebSocket Example</title>  
 </head>  
 <body>  
-  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>  
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/truffle-contract@latest/dist/truffle-contract.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/ipfs-api@latest/dist/index.js"></script>
-  <script>  
+  <script  type="module"  src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>  
+  <script  type="module"  src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script  type="module"  src="https://cdn.jsdelivr.net/npm/truffle-contract@latest/dist/truffle-contract.js"></script>
+  <script  type="module"  src="https://cdn.jsdelivr.net/npm/ipfs-api@latest/dist/index.js"></script>
+  <script >  
    import WebSocket, { WebSocketServer } from 'ws';
 
     const ws = new WebSocketServer();
