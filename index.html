@@ -1,5 +1,27 @@
-<!DOCTYPE HTML>
-<html> 
-<h1>Welcome to my blog</h1>
-  <h2> 这将是第一blog</h2>
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <meta charset="UTF-8">  
+  <title>WebSocket Example</title>  
+</head>  
+<body>  
+  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>  
+  <script>  
+    // 使用require()引入ws库  
+    const ws = require('ws');  
+  
+    // 创建一个WebSocket服务器实例  
+    const wss = new ws.Server({ port: 8080 });  
+  
+    // 当有新的连接时触发onopen事件  
+    wss.on('open', function open() {  
+      alert('connected') 
+    });  
+  
+    // 当接收到消息时触发onmessage事件  
+    wss.on('message', function incoming(data) {  
+      console.log('received: %s', data);  
+    });  
+  </script>  
+</body>  
 </html>
